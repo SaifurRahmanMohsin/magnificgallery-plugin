@@ -1,0 +1,28 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Gallery
+
+# Model Form Field configuration
+form: @/plugins/mohsin/magnificgallery/models/gallery/fields.yaml
+
+# Model Class name
+modelClass: Mohsin\MagnificGallery\Models\Gallery
+
+# Default redirect location
+defaultRedirect: mohsin/magnificgallery/galleries
+
+create:
+    title: Create Galleries
+    redirect: mohsin/magnificgallery/galleries/update/:id
+    redirectClose: mohsin/magnificgallery/galleries
+
+update:
+    title: Update Galleries
+    redirect: mohsin/magnificgallery/galleries
+    redirectClose: mohsin/magnificgallery/galleries
+
+preview:
+    title: Preview Galleries

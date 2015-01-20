@@ -1,0 +1,10 @@
+
+<div id="{{ __SELF__ }}">
+{% for i, image in gallery.images %}
+  <a href="{{ image.path }}" title="{{ image.title }}"><img src="{{ gallery.images[i].thumb( width , height ) }}" width="{{ width }}" height="{{ height }}"></a>
+{% endfor %}
+</div>
+
+<script>
+  window.magnificId = '{{ __SELF__ }}';
+</script>
