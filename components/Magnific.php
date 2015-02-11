@@ -1,6 +1,7 @@
 <?php
 namespace Mohsin\MagnificGallery\Components;
 
+use Lang;
 use Cms\Classes\ComponentBase;
 use Mohsin\MagnificGallery\Models\Gallery;
 
