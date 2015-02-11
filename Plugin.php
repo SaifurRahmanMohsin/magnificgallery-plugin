@@ -1,11 +1,12 @@
 <?php
 namespace Mohsin\MagnificGallery;
 
-use App;
-use Event;
 use Backend;
 use System\Classes\PluginBase;
 
+/**
+ * Magnific Gallery Plugin Information File
+ */
 class Plugin extends PluginBase
 {
 
@@ -17,8 +18,8 @@ class Plugin extends PluginBase
   public function pluginDetails()
   {
     return [
-      'name'        => 'Magnific Gallery',
-      'description' => 'Create responsive galleries to use in your web app.',
+      'name'        => 'mohsin.magnificgallery::lang.plugin.name',
+      'description' => 'mohsin.magnificgallery::lang.plugin.description',
       'author'      => 'Saifur Rahman Mohsin',
       'icon'        => 'icon-picture-o'
     ];
@@ -35,10 +36,10 @@ class Plugin extends PluginBase
   {
     return [
       'galleries' => [
-        'label' => 'Gallery',
+        'label' => 'mohsin.magnificgallery::lang.magnific.name',
         'url'   => Backend::url('mohsin/magnificgallery/galleries'),
         'icon'        => 'icon-picture-o',
-        'permissions' => ['mohsin.*'],
+        'permissions' => ['mohsin.magnificgallery.*'],
         'order'       => 500
       ],
     ];

@@ -9,7 +9,7 @@ list: @/plugins/mohsin/magnificgallery/models/gallery/columns.yaml
 modelClass: Mohsin\MagnificGallery\Models\Gallery
 
 # List Title
-title: Manage Galleries
+title: mohsin.magnificgallery::lang.galleries.manage_galleries
 
 # Link URL for each record
 recordUrl: mohsin/magnificgallery/galleries/update/:id

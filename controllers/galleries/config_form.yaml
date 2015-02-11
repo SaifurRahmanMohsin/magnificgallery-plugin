@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Gallery
+name: mohsin.magnificgallery::lang.magnific.name
 
 # Model Form Field configuration
 form: @/plugins/mohsin/magnificgallery/models/gallery/fields.yaml
@@ -15,14 +15,14 @@ modelClass: Mohsin\MagnificGallery\Models\Gallery
 defaultRedirect: mohsin/magnificgallery/galleries
 
 create:
-    title: Create Galleries
+    title: mohsin.magnificgallery::lang.galleries.create_galleries
     redirect: mohsin/magnificgallery/galleries/update/:id
     redirectClose: mohsin/magnificgallery/galleries
 
 update:
-    title: Update Galleries
+    title: mohsin.magnificgallery::lang.galleries.update_galleries
     redirect: mohsin/magnificgallery/galleries
     redirectClose: mohsin/magnificgallery/galleries
 
 preview:
-    title: Preview Galleries
+    title: mohsin.magnificgallery::lang.galleries.preview_galleries

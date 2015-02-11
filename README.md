@@ -4,10 +4,13 @@ Gallery plugin for October CMS based on Magnific Popup
 ## Installation ##
 Until this plugin is added to the market place, you will have to use the following method to update it:
 ```
-cd /your/october/project/folder
-cd plugins
-wget http://tempestronics.com/projects/magnific-gallery/mohsin.zip
-unzip mohsin.zip
+cd /your/october/project/plugins/folder
+mkdir -p mohsin
+cd $_
+wget https://github.com/SaifurRahmanMohsin/Magnific-Gallery/archive/master.zip
+unzip master.zip
+rm $_
+mv Magnific-Gallery-master txt
 ```
 Now goto your backend /backend/system/updates URL i.e. the Updates page in the Settings panel. Click `Check for updates` and Force update. This will generate the tables necessary for the plugin to work. You have now installed magnific gallery!
 

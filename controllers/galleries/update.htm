@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
 <ul>
-  <li><a href="<?= Backend::url('mohsin/magnificgallery/galleries') ?>">Galleries</a></li>
+  <li><a href="<?= Backend::url('mohsin/magnificgallery/galleries') ?>"><?= e(trans('mohsin.magnificgallery::lang.galleries.plural')) ?></a></li>
   <li><?= e($this->pageTitle) ?></li>
 </ul>
 <?php Block::endPut() ?>
@@ -19,9 +19,9 @@
       data-request-data="redirect:0"
       data-hotkey="ctrl+s"
       data-hotkey-mac="cmd+s"
-      data-load-indicator="Saving Gallery..."
+      data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name'=>$formRecordName])) ?>"
       class="btn btn-primary">
-      Save
+      <?= e(trans('backend::lang.form.save')) ?>
     </button>
     <button
     type="button"
@@ -29,19 +29,21 @@
     data-request-data="close:1"
     data-hotkey="ctrl+enter"
     data-hotkey-mac="cmd+enter"
-    data-load-indicator="Saving Gallery..."
+    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name'=>$formRecordName])) ?>"
     class="btn btn-default">
-    Save and Close
+    <?= e(trans('backend::lang.form.save_and_close')) ?>
   </button>
   <button
   type="button"
   class="oc-icon-trash-o btn-icon danger pull-right"
   data-request="onDelete"
-  data-load-indicator="Deleting Gallery..."
-  data-request-confirm="Do you really want to delete this gallery?">
+  data-load-indicator="<?= e(trans('backend::lang.form.deleting_name', ['name'=>$formRecordName])) ?>"
+  data-request-confirm="<?= e(trans('mohsin.magnificgallery::lang.galleries.delete_confirm')) ?>">
 </button>
 <span class="btn-text">
-  <a href="<?= Backend::url('mohsin/magnificgallery/galleries') ?>">Cancel</a>
+  <a href="<?= Backend::url('mohsin/magnificgallery/galleries') ?>">
+  <?= e(trans('backend::lang.form.cancel')) ?>
+  </a>
 </span>
 </div>
 </div>
@@ -51,6 +53,8 @@
 <?php else: ?>
 
   <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-  <p><a href="<?= Backend::url('mohsin/magnificgallery/galleries') ?>" class="btn btn-default">Return to galleries list</a></p>
+  <p><a href="<?= Backend::url('mohsin/magnificgallery/galleries') ?>" class="btn btn-default">
+  <?= e(trans('mohsin.magnificgallery::lang.galleries.return_to_galleries')) ?>
+  </a></p>
 
 <?php endif ?>

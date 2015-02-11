@@ -3,15 +3,14 @@ namespace Mohsin\MagnificGallery\Components;
 
 use Cms\Classes\ComponentBase;
 use Mohsin\MagnificGallery\Models\Gallery;
-use Lang;
 
 class Magnific extends ComponentBase
 {
   public function componentDetails()
   {
     return [
-    'name' => 'Gallery',
-    'description' => 'Display an album from the gallery in a page.'
+    'name' => 'mohsin.magnificgallery::lang.magnific.name',
+    'description' => 'mohsin.magnificgallery::lang.magnific.description'
     ];
   }
 
@@ -19,8 +18,8 @@ class Magnific extends ComponentBase
   {
     return [
     'idGallery' => [
-      'title'        => 'Gallery',
-      'description'  => 'Choose the gallery that will display',
+      'title'        => 'mohsin.magnificgallery::lang.magnific.name',
+      'description'  => 'mohsin.magnificgallery::lang.magnific.choice',
       'type'         => 'dropdown'
       ],
     'height' => [
