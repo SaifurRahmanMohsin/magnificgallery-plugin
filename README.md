@@ -1,26 +1,29 @@
 # [Magnific-Gallery](https://github.com/SaifurRahmanMohsin/Magnific-Gallery) #
-Gallery plugin for October CMS based on Magnific Popup
+Responsive Gallery plugin for October CMS based on Magnific Popup
 
 ## Installation ##
-Until this plugin is added to the market place, you will have to use the following method to update it:
+#### MarketPlace Installation ####
+You can use the plugin code **Mohsin.MagnificGallery** in your October backend to get this plugin. Enjoy!!!
+
+#### Manual Installation ####
+Some advanced users might prefer to use manually install the plugin. This can be done using the command line. CD into your OctoberCMS project folder and paste these commands. It will execute one after another:
 ```
-cd /your/october/project/plugins/folder
-mkdir -p mohsin
-cd $_
+[ -f artisan ] && cd plugins
+mkdir -p mohsin && cd $_
 wget https://github.com/SaifurRahmanMohsin/Magnific-Gallery/archive/master.zip
-unzip master.zip
-rm $_
-mv Magnific-Gallery-master txt
+[ -f master ] && unzip master || unzip master.zip && rm $_
+mv Magnific-Gallery-master magnificgallery && cd $_
+
 ```
-Now goto your backend /backend/system/updates URL i.e. the Updates page in the Settings panel. Click `Check for updates` and Force update. This will generate the tables necessary for the plugin to work. You have now installed magnific gallery!
+Logout from your backend and login again. This will create the necessary tables for the plugin to work. You have now installed **Magnific-Gallery**! Enjoy!!!
 
 ## Quick Start ##
-Add the component to your project. Choose `Gallery` from the top bar in the backend and create a new gallery. Upload the photos which you would like to display on your web app. Now in the CMS controller screen add the component provided `Magnific Gallery` to your page and choose the gallery from the component properties. You can also set the preferred height and width of the thumbnails as per your choice.
+After the plugin is installed choose `Gallery` in the Settings page under the CMS category and create a new gallery. Upload the photos which you would like to display on your web app. Now, in the CMS page add the component provided `Magnific Gallery` to your page by dragging it into the page and choose the desired gallery from the component properties. You can also set the preferred height and width of the thumbnails as per your choice.
 
-## Credits ##
+## Thanks ##
 
 #### Magnific Popup ####
-[Dmitry Semenov](http://dimsemenov.com/plugins/magnific-popup/) for making this awesome component.
+[Dmitry Semenov](http://dimsemenov.com/plugins/magnific-popup/) for Magnific-Popup.
 
-#### The developers of October CMS ####
-[Alexey Bobkov and Samuel Georges](http://octobercms.com) for making an even more awesome CMS to port the component in.
+#### October CMS ####
+[Alexey Bobkov and Samuel Georges](http://octobercms.com) for OctoberCMS.
