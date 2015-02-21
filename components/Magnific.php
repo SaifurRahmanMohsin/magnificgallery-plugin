@@ -3,6 +3,7 @@ namespace Mohsin\MagnificGallery\Components;
 
 use Lang;
 use Cms\Classes\ComponentBase;
+use System\Classes\CombineAssets;
 use Mohsin\MagnificGallery\Models\Gallery;
 
 class Magnific extends ComponentBase
@@ -51,9 +52,15 @@ class Magnific extends ComponentBase
 
   public function onRun()
   {
-    $this->addCss('assets/css/magnific-popup.css');
-    $this->addJs('assets/js/jquery.magnific-popup.min.js');
-    $this->addJs('assets/js/magnific.js');
+    $css = [
+      'assets/css/magnific-popup.css'
+    ];
+    $js  = [
+      'assets/js/jquery.magnific-popup.min.js',
+      'assets/js/magnific.js'
+    ];
+    $this -> addCss(CombineAssets::combine($css, plugins_path() . '/mohsin/magnificgallery'));
+    $this -> addJs(CombineAssets::combine($js, plugins_path() . '/mohsin/magnificgallery'));
   }
 
   public function onRender(){
