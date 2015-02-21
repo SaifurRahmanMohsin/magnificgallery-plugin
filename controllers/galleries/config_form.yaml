@@ -6,7 +6,7 @@
 name: mohsin.magnificgallery::lang.magnific.name
 
 # Model Form Field configuration
-form: @/plugins/mohsin/magnificgallery/models/gallery/fields.yaml
+form: ~/plugins/mohsin/magnificgallery/models/gallery/fields.yaml
 
 # Model Class name
 modelClass: Mohsin\MagnificGallery\Models\Gallery

@@ -1,4 +1,4 @@
-$('#' + window.magnificId).magnificPopup({
+$('.magnific').magnificPopup({
   delegate: 'a',
   type: 'image',
   tLoading: 'Loading image #%curr%...',

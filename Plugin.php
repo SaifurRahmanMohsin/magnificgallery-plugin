@@ -3,6 +3,7 @@ namespace Mohsin\MagnificGallery;
 
 use Backend;
 use System\Classes\PluginBase;
+use System\Classes\SettingsManager;
 
 /**
  * Magnific Gallery Plugin Information File
@@ -32,15 +33,17 @@ class Plugin extends PluginBase
     ];
   }
 
-  public function registerNavigation()
+  public function registerSettings()
   {
     return [
       'galleries' => [
-        'label' => 'mohsin.magnificgallery::lang.magnific.name',
-        'url'   => Backend::url('mohsin/magnificgallery/galleries'),
-        'icon'        => 'icon-picture-o',
+        'label'       => 'mohsin.magnificgallery::lang.magnific.name',
+        'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
+        'description' => 'mohsin.magnificgallery::lang.plugin.description',
+        'category'    => SettingsManager::CATEGORY_CMS,
+        'icon'        => 'icon-film',
         'permissions' => ['mohsin.magnificgallery.*'],
-        'order'       => 500
+        'order'       => 200
       ],
     ];
   }

@@ -24,22 +24,22 @@ class Magnific extends ComponentBase
       'type'         => 'dropdown'
       ],
     'height' => [
-      'title'         => 'Height',
-      'description'   => 'Height of each image.',
-      'type'        => 'string',
+      'title'             => 'Height',
+      'description'       => 'Height of each image.',
+      'type'              => 'string',
       'validationPattern' => '^[0-9]+$|^auto$',
       'validationMessage' => 'Invalid value',
-      'default'     => '100',
-      'group'       => Lang::get('Dimensions'),
+      'default'           => '100',
+      'group'             => Lang::get('Dimensions'),
     ],
     'width' => [
-      'title'         => 'Width',
-      'description'   => 'Width of each image.',
-      'type'        => 'string',
+      'title'             => 'Width',
+      'description'       => 'Width of each image.',
+      'type'              => 'string',
       'validationPattern' => '^[0-9]+$|^auto$',
       'validationMessage' => 'Invalid value',
-      'default'     => 'auto',
-      'group'       => Lang::get('Dimensions'),
+      'default'           => 'auto',
+      'group'             => Lang::get('Dimensions'),
       ],
     ];
   }
@@ -58,10 +58,9 @@ class Magnific extends ComponentBase
 
   public function onRender(){
     $gallery = new Gallery;
-    $this->gallery = $this->page['gallery'] = $gallery->where('id', '=', $this->propertyOrParam('idGallery'))->first();
-
-    $this->page['height']=$this->propertyOrParam('height');
-    $this->page['width']=$this->propertyOrParam('width');
+    $this -> gallery = $this -> page['gallery'] = $gallery->where('id', '=', $this -> property('idGallery')) -> first();
+    $this -> page['height'] = $this -> property('height');
+    $this -> page['width']  = $this -> property('width');
   }
 }
 ?>

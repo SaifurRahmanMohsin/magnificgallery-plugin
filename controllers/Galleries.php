@@ -4,6 +4,7 @@ namespace Mohsin\MagnificGallery\Controllers;
 use Flash;
 use BackendMenu;
 use Backend\Classes\Controller;
+use System\Classes\SettingsManager;
 use Mohsin\MagnificGallery\Models\Gallery;
 
 class Galleries extends Controller {
@@ -19,7 +20,8 @@ class Galleries extends Controller {
   public function __construct()
   {
     parent::__construct();
-    BackendMenu::setContext('Mohsin.MagnificGallery', 'magnificgallery', 'galleries');
+    BackendMenu::setContext('October.System', 'system', 'settings');
+    SettingsManager::setContext('Mohsin.MagnificGallery', 'galleries');
   }
 }
 ?>

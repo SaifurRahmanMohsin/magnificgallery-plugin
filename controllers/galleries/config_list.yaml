@@ -3,7 +3,7 @@
 # ===================================
 
 # Model List Column configuration
-list: @/plugins/mohsin/magnificgallery/models/gallery/columns.yaml
+list: ~/plugins/mohsin/magnificgallery/models/gallery/columns.yaml
 
 # Model Class name
 modelClass: Mohsin\MagnificGallery\Models\Gallery
