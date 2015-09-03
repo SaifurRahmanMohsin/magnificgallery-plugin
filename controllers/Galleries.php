@@ -20,7 +20,7 @@ class Galleries extends Controller {
   public function __construct()
   {
     parent::__construct();
-    BackendMenu::setContext('October.System', 'system', 'settings');
+    BackendMenu::setContext('Mohsin.MagnificGallery', 'gallery', 'galleries');
     SettingsManager::setContext('Mohsin.MagnificGallery', 'galleries');
   }
 }

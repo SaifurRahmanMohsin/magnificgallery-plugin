@@ -11,7 +11,7 @@ $('.magnific').magnificPopup({
   image: {
     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
     titleSrc: function(item) {
-      return item.el.attr('title') + '<small>' + item.el.attr('desc') + '</small>';
+      return item.el.children()[0].attributes['title'].value + '<small>' + item.el.children()[0].attributes['alt'].value + '</small>';
     }
   }
 });

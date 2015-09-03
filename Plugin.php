@@ -33,17 +33,32 @@ class Plugin extends PluginBase
     ];
   }
 
-  public function registerSettings()
+  public function registerNavigation()
   {
     return [
-      'galleries' => [
+      'gallery' => [
         'label'       => 'mohsin.magnificgallery::lang.magnific.name',
         'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
-        'description' => 'mohsin.magnificgallery::lang.plugin.description',
-        'category'    => SettingsManager::CATEGORY_CMS,
+        'permissions' => ['cms.manage_content'],
         'icon'        => 'icon-film',
-        'permissions' => ['mohsin.magnificgallery.*'],
-        'order'       => 200
+        'sideMenu'    => [
+            'galleries' => [
+                'label'       => 'mohsin.magnificgallery::lang.magnific.name',
+                'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
+                'description' => 'mohsin.magnificgallery::lang.plugin.description',
+                'icon'        => 'icon-film',
+                'permissions' => ['cms.manage_content'],
+                'order'       => 100
+            ],
+            'settings' => [
+                'label'       => 'cms::lang.editor.settings',
+                'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
+                'description' => 'mohsin.magnificgallery::lang.plugin.description',
+                'icon'        => 'icon-cog',
+                'permissions' => ['cms.manage_content'],
+                'order'       => 200
+            ]
+        ]
       ],
     ];
   }
