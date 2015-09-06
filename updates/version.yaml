@@ -1,3 +1,5 @@
 1.0.1:
     - Basic Gallery Plugin
     - create_galleries_table.php
+1.0.2:
+    - Added permissions

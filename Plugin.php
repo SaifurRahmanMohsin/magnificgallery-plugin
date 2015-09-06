@@ -33,34 +33,29 @@ class Plugin extends PluginBase
     ];
   }
 
-  public function registerNavigation()
+  public function registerSettings()
   {
     return [
-      'gallery' => [
+      'galleries' => [
         'label'       => 'mohsin.magnificgallery::lang.magnific.name',
-        'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
-        'permissions' => ['cms.manage_content'],
+        'url'         => Backend::url('mohsin/magnificgallery/galleries'),
+        'description' => 'mohsin.magnificgallery::lang.plugin.description',
+        'category'    => SettingsManager::CATEGORY_CMS,
         'icon'        => 'icon-film',
-        'sideMenu'    => [
-            'galleries' => [
-                'label'       => 'mohsin.magnificgallery::lang.magnific.name',
-                'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
-                'description' => 'mohsin.magnificgallery::lang.plugin.description',
-                'icon'        => 'icon-film',
-                'permissions' => ['cms.manage_content'],
-                'order'       => 100
-            ],
-            'settings' => [
-                'label'       => 'cms::lang.editor.settings',
-                'url'   			=> Backend::url('mohsin/magnificgallery/galleries'),
-                'description' => 'mohsin.magnificgallery::lang.plugin.description',
-                'icon'        => 'icon-cog',
-                'permissions' => ['cms.manage_content'],
-                'order'       => 200
-            ]
-        ]
+        'permissions' => ['mohsin.magnificgallery.*'],
+        'order'       => 200
       ],
     ];
+  }
+
+  public function registerPermissions()
+  {
+      return [
+          'mohsin.magnificgallery.manage_galleries' => [
+              'label' => 'mohsin.magnificgallery::lang.permissions.manage_galleries',
+              'tab'   => 'cms::lang.permissions.name'
+          ],
+      ];
   }
 }
 ?>

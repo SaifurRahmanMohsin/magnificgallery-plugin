@@ -21,4 +21,7 @@ return [
     'description' => 'Display an album from the gallery in a page.',
     'choice' => 'Choose the gallery that you want to display.',
   ],
+  'permissions' => [
+      'manage_galleries' => 'Manage the galleries',
+    ]
 ];
