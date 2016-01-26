@@ -1,6 +1,6 @@
 
 <div id="{{ __SELF__ }}" class="magnific">
-  {% for i, image in gallery.images %}
-  <a href="{{ image.path }}"><img title="{{ image.title }}" alt="{{ image.description }}" src="{{ gallery.images[i].thumb( width , height ) }}" width="{{ width }}" height="{{ height }}"></a>
+  {% for i, image in __SELF__.gallery.images %}
+  <a href="{{ image.path }}"><img title="{{ image.title }}" alt="{{ image.description }}" src="{{ image.thumb( width , height ) }}" width="{{ __SELF__.property('width') }}" height="{{ __SELF__.property('height') }}"></a>
   {% endfor %}
 </div>

@@ -8,6 +8,25 @@ use Mohsin\MagnificGallery\Models\Gallery;
 
 class Magnific extends ComponentBase
 {
+
+  /**
+   * The model that contains the images
+   * @var Model
+   */
+  public $gallery;
+
+  /**
+   * Parameter to use for the image height
+   * @var string
+   */
+  public $height;
+
+  /**
+   * Parameter to use for the image width
+   * @var string
+   */
+  public $width;
+
   public function componentDetails()
   {
     return [
@@ -45,13 +64,18 @@ class Magnific extends ComponentBase
     ];
   }
 
-  public function getidGalleryOptions()
+  protected function getidGalleryOptions()
   {
     return Gallery::select('id', 'name')->orderBy('name')->get()->lists('name', 'id');
   }
 
   public function onRun()
   {
+    $gallery = new Gallery;
+    $this -> gallery = $gallery -> where('id', '=', $this -> property('idGallery')) -> first();
+    $this -> height = $this -> property('height');
+    $this -> width  = $this -> property('width');
+
     $css = [
       'assets/css/magnific-popup.css'
     ];
@@ -63,11 +87,5 @@ class Magnific extends ComponentBase
     $this -> addJs(CombineAssets::combine($js, plugins_path() . '/mohsin/magnificgallery'));
   }
 
-  public function onRender(){
-    $gallery = new Gallery;
-    $this -> gallery = $this -> page['gallery'] = $gallery->where('id', '=', $this -> property('idGallery')) -> first();
-    $this -> page['height'] = $this -> property('height');
-    $this -> page['width']  = $this -> property('width');
-  }
 }
 ?>
