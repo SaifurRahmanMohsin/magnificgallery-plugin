@@ -1,19 +1,20 @@
 <div data-control="toolbar">
   <div class="btn-group">
     <a href="<?= Backend::url('mohsin/magnificgallery/galleries/create') ?>" class="btn btn-primary oc-icon-plus">
-    <?= e(trans('mohsin.magnificgallery::lang.galleries.new_gallery')) ?>
+      <?= e(trans('mohsin.magnificgallery::lang.galleries.new_gallery')) ?>
     </a>
       <button
-      onclick="$(this).data('request-data', {
-        checked: $('.control-list').listWidget('getChecked')
-      })"
-      data-request="onDelete"
-      data-request-confirm="<?= e(trans('backend::lang.form.action_confirm')) ?>"
-      data-trigger-action="enable"
-      data-trigger=".control-list input[type=checkbox]"
-      data-trigger-condition="checked"
-      data-stripe-load-indicator>
-      <?= e(trans('backend::lang.form.delete')) ?>
+        class="btn btn-default oc-icon-trash-o"
+        onclick="$(this).data('request-data', {
+          checked: $('.control-list').listWidget('getChecked')
+        })"
+        data-request="onDelete"
+        data-request-confirm="<?= e(trans('backend::lang.form.action_confirm')) ?>"
+        data-trigger-action="enable"
+        data-trigger=".control-list input[type=checkbox]"
+        data-trigger-condition="checked"
+        data-stripe-load-indicator>
+        <?= e(trans('backend::lang.form.delete')) ?>
     </button>
-</div>
+  </div>
 </div>
