@@ -64,7 +64,7 @@ class Magnific extends ComponentBase
     ];
   }
 
-  protected function getidGalleryOptions()
+  public function getidGalleryOptions()
   {
     return Gallery::select('id', 'name')->orderBy('name')->get()->lists('name', 'id');
   }
