@@ -21,6 +21,10 @@ return [
     'description' => 'Display an album from the gallery in a page.',
     'choice' => 'Choose the gallery that you want to display.',
   ],
+  'preferences' => [
+    'show_gallery_in_nav_label' => 'Display the gallery in navigation',
+    'show_gallery_in_nav_comment' => 'Enabling this makes the gallery appear in the navigation menu instead of the settings page.',
+  ],
   'permissions' => [
       'manage_galleries' => 'Manage the galleries',
     ]
