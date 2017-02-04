@@ -1,11 +1,11 @@
-<?php
-namespace Mohsin\MagnificGallery;
+<?php namespace Mohsin\MagnificGallery;
 
+use Event;
 use Backend;
 use System\Classes\PluginBase;
+use Backend\Models\BrandSetting;
 use System\Classes\SettingsManager;
-use Backend\Models\Preference as PreferenceModel;
-use Backend\Controllers\Preferences as PreferencesController;
+use System\Controllers\Settings as SettingsController;
 
 /**
  * Magnific Gallery Plugin Information File
@@ -29,21 +29,18 @@ class Plugin extends PluginBase
 
   public function boot()
   {
-      PreferencesController::extendFormFields(function($form, $model, $context) {
-            if(!$model instanceof PreferenceModel)
-                return;
+      Event::listen('backend.form.extendFields', function ($form) {
+        if (!$form->model instanceof BrandSetting)
+            return;
 
-            if(!$model->exists)
-              return;
-
-            $form->addTabFields([
-                'show_gallery_in_nav' => [
-                    'label' => 'mohsin.magnificgallery::lang.preferences.show_gallery_in_nav_label',
-                    'commentAbove' => 'mohsin.magnificgallery::lang.preferences.show_gallery_in_nav_comment',
-                    'type' => 'switch',
-                    'tab' => SettingsManager::CATEGORY_CMS,
-                  ]
-              ]);
+        $form->addTabFields([
+            'show_gallery_in_nav' => [
+                'label' => 'mohsin.magnificgallery::lang.preferences.show_gallery_in_nav_label',
+                'commentAbove' => 'mohsin.magnificgallery::lang.preferences.show_gallery_in_nav_comment',
+                'type' => 'switch',
+                'tab' => SettingsManager::CATEGORY_CMS,
+              ]
+          ]);
       });
   }
 
@@ -56,7 +53,7 @@ class Plugin extends PluginBase
 
   public function registerNavigation()
   {
-      if(PreferenceModel::instance()->get('show_gallery_in_nav')) {
+      if(BrandSetting::instance()->get('show_gallery_in_nav')) {
           return [
               'galleries' => [
                 'label'       => 'mohsin.magnificgallery::lang.magnific.name',
@@ -73,7 +70,7 @@ class Plugin extends PluginBase
 
   public function registerSettings()
   {
-      if(!PreferenceModel::instance()->get('show_gallery_in_nav')) {
+      if(!BrandSetting::instance()->get('show_gallery_in_nav')) {
           return [
               'galleries' => [
                 'label'       => 'mohsin.magnificgallery::lang.magnific.name',

@@ -3,9 +3,9 @@
 use Flash;
 use BackendMenu;
 use Backend\Classes\Controller;
+use Backend\Models\BrandSetting;
 use System\Classes\SettingsManager;
 use Mohsin\MagnificGallery\Models\Gallery;
-use Backend\Models\Preference as PreferenceModel;
 
 class Galleries extends Controller
 {
@@ -23,7 +23,7 @@ class Galleries extends Controller
     {
         parent::__construct();
 
-        PreferenceModel::instance()->get('show_gallery_in_nav') ? BackendMenu::setContext('Mohsin.MagnificGallery', 'galleries') : BackendMenu::setContext('October.System', 'system', 'settings');
+        BrandSetting::instance()->get('show_gallery_in_nav') ? BackendMenu::setContext('Mohsin.MagnificGallery', 'galleries') : BackendMenu::setContext('October.System', 'system', 'settings');
         SettingsManager::setContext('Mohsin.MagnificGallery', 'galleries');
     }
 
