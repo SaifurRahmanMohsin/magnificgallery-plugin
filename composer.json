@@ -1,0 +1,8 @@
+{
+    "name": "mohsin/magnificgallery-plugin",
+    "type": "october-plugin",
+    "description": "Responsive gallery plugin for OctoberCMS based on Magnific Popup.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

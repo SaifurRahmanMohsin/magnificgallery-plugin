@@ -1,5 +1,5 @@
-# [Magnific-Gallery](https://github.com/SaifurRahmanMohsin/Magnific-Gallery) #
-Responsive Gallery plugin for October CMS based on Magnific Popup
+# [Magnific-Gallery](https://github.com/mohsin/magnificgallery-plugin) #
+Responsive Gallery plugin for OctoberCMS based on Magnific Popup
 
 ## Installation ##
 #### MarketPlace Installation ####
@@ -10,9 +10,9 @@ Some advanced users might prefer to use manually install the plugin. This can be
 ```
 [ -f artisan ] && cd plugins
 mkdir -p mohsin && cd $_
-wget https://github.com/mohsin/Magnific-Gallery/archive/master.zip
+wget https://github.com/mohsin/magnificgallery-plugin/archive/master.zip
 [ -f master ] && unzip master || unzip master.zip && rm $_
-mv Magnific-Gallery-master magnificgallery && cd $_
+mv magnificgallery-plugin-master magnificgallery && cd $_
 
 ```
 Logout from your backend and login again. This will create the necessary tables for the plugin to work. You have now installed **Magnific-Gallery**! Enjoy!!!
@@ -23,7 +23,7 @@ After the plugin is installed choose `Gallery` in the Settings page under the CM
 ## Thanks ##
 
 #### Magnific Popup ####
-[Dmitry Semenov](http://dimsemenov.com/plugins/magnific-popup/) for Magnific-Popup.
+[Dmitry Semenov](http://dimsemenov.com/plugins/magnific-popup) for Magnific-Popup.
 
 #### October CMS ####
 [Alexey Bobkov and Samuel Georges](http://octobercms.com) for OctoberCMS.
