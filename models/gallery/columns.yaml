@@ -4,11 +4,13 @@
 
 columns:
     name:
-        label: Name
+        label: mohsin.magnificgallery::lang.galleries.name
         searchable: true
 
     created_at:
-        label: Created
+        label: backend::lang.user.created_at
+        type: timetense
 
     updated_at:
-        label: Updated
+        label: backend::lang.user.updated_at
+        type: timetense

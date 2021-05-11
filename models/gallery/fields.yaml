@@ -4,10 +4,10 @@
 
 fields:
     name:
+        label: mohsin.magnificgallery::lang.galleries.name
         span: full
-        label: Name
 
     images:
-        label: Photos
+        label: mohsin.magnificgallery::lang.galleries.photos
         type: fileupload
         mode: image

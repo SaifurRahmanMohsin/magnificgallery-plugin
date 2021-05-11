@@ -10,7 +10,7 @@ Some advanced users might prefer to use manually install the plugin. This can be
 ```
 [ -f artisan ] && cd plugins
 mkdir -p mohsin && cd $_
-wget https://github.com/SaifurRahmanMohsin/Magnific-Gallery/archive/master.zip
+wget https://github.com/mohsin/Magnific-Gallery/archive/master.zip
 [ -f master ] && unzip master || unzip master.zip && rm $_
 mv Magnific-Gallery-master magnificgallery && cd $_
 

@@ -23,6 +23,3 @@ update:
     title: mohsin.magnificgallery::lang.galleries.update_galleries
     redirect: mohsin/magnificgallery/galleries
     redirectClose: mohsin/magnificgallery/galleries
-
-preview:
-    title: mohsin.magnificgallery::lang.galleries.preview_galleries

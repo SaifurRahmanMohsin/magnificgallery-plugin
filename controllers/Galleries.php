@@ -1,4 +1,6 @@
-<?php namespace Mohsin\MagnificGallery\Controllers;
+<?php
+
+namespace Mohsin\MagnificGallery\Controllers;
 
 use Flash;
 use BackendMenu;
@@ -10,8 +12,8 @@ use Mohsin\MagnificGallery\Models\Gallery;
 class Galleries extends Controller
 {
     public $implement = [
-      'Backend.Behaviors.FormController',
-      'Backend.Behaviors.ListController'
+        'Backend.Behaviors.FormController',
+        'Backend.Behaviors.ListController'
     ];
 
     public $formConfig = 'config_form.yaml';
@@ -22,9 +24,7 @@ class Galleries extends Controller
     public function __construct()
     {
         parent::__construct();
-
         BrandSetting::instance()->get('show_gallery_in_nav') ? BackendMenu::setContext('Mohsin.MagnificGallery', 'galleries') : BackendMenu::setContext('October.System', 'system', 'settings');
         SettingsManager::setContext('Mohsin.MagnificGallery', 'galleries');
     }
-
 }
