@@ -1,5 +1,11 @@
 <div id="{{ __SELF__ }}" class="magnific">
-  {% for i, image in __SELF__.gallery.images %}
+  {% for i, image in __SELF__.paginatedImages %}
   <a href="{{ image.path }}"><img title="{{ image.title }}" alt="{{ image.description }}" src="{{ image.thumb( __SELF__.width , __SELF__.height ) }}" width="{{ __SELF__.property('width') }}" height="{{ __SELF__.property('height') }}"></a>
   {% endfor %}
 </div>
+
+{% if __SELF__.property('showPagination') and __SELF__.totalPages > 1 %}
+<div class="magnific-pagination-container">
+  {{ __SELF__.getPaginationLinks()|raw }}
+</div>
+{% endif %}

@@ -9,3 +9,5 @@
     - Developer can now chose display gallery in navigation menu or settings page.
 1.0.5:
     - Bug fix from last update -- Developer can now chose display gallery in navigation menu or settings page.
+1.1.0:
+    - Added pagination support to gallery component

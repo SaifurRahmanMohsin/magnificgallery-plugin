@@ -27,6 +27,12 @@ return [
     'show_gallery_in_nav_comment' => 'Enabling this makes the gallery appear in the navigation menu instead of the settings page.',
   ],
   'permissions' => [
-      'manage_galleries' => 'Manage the galleries',
-    ]
+    'manage_galleries' => 'Manage the galleries',
+  ],
+  'pagination' => [
+    'previous'      => 'Previous',
+    'next'          => 'Next',
+    'per_page'      => 'Images per page',
+    'show_controls' => 'Show pagination controls'
+  ]
 ];

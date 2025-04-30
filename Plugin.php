@@ -7,7 +7,6 @@ use Backend;
 use System\Classes\PluginBase;
 use Backend\Models\BrandSetting;
 use System\Classes\SettingsManager;
-use System\Controllers\Settings as SettingsController;
 
 /**
  * Magnific Gallery Plugin Information File
@@ -94,6 +93,18 @@ class Plugin extends PluginBase
                 'label' => 'mohsin.magnificgallery::lang.permissions.manage_galleries',
                 'tab'   => 'cms::lang.permissions.name'
             ],
+        ];
+    }
+
+    /**
+     * Register plugin stylesheets
+     */
+    public function registerAssetFiles()
+    {
+        return [
+            'css' => [
+                '/plugins/mohsin/magnificgallery/assets/css/pagination.css'
+            ]
         ];
     }
 }
