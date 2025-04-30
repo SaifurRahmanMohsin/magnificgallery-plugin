@@ -84,6 +84,6 @@ class Magnific extends ComponentBase
           'assets/js/magnific.js'
         ];
         $this -> addCss(CombineAssets::combine($css, plugins_path() . '/mohsin/magnificgallery'));
-        $this -> addJs(CombineAssets::combine($js, plugins_path() . '/mohsin/magnificgallery'));
+        $this -> addJs(CombineAssets::combine($js, plugins_path() . '/mohsin/magnificgallery'), ['defer' => true]);
     }
 }
